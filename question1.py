@@ -33,7 +33,7 @@ def simple_histogram(source, column_name, title, top_n=10, text_size=8, wrap_len
     ax.set_ylabel('Count')
     ax.set_title(title)
 
-    labels = ['\n'.join(wrap(label, warp_length)) for label in result['Category'].head(top_n)]
+    labels = ['\n'.join(wrap(label, wrap_length)) for label in result['Category'].head(top_n)]
     ax.set_xticklabels(labels, size=text_size, rotation=90)
 
     fig.tight_layout()
